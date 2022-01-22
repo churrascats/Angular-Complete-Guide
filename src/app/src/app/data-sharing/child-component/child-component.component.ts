@@ -76,7 +76,7 @@ export class ChildComponentComponent implements OnInit {
       if (elementRef[i].children[0].getAttribute('checked') === 'true') {
         this.response = {
           ...this.response,
-          value: this.numberInput?.nativeElement.value,
+          value: parseFloat(this.numberInput?.nativeElement.value),
           operator: elementRef[i].children[0].value,
         }
         break

@@ -18,7 +18,7 @@ export class ParentComponentComponent implements OnInit {
   getDataFromChild = (event: Response) => {
     const operations: { [key: string]: Function } = {
       sum: () => {
-        this.total -= -event.value
+        this.total += event.value
       },
       sub: () => {
         this.total -= event.value
