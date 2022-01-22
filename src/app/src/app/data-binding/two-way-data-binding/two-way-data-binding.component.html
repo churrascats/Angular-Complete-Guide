@@ -1,0 +1,16 @@
+<article>
+  <h2>Two Way Data Binding</h2>
+
+  <legend class="mt-5 ml-4">String Variable</legend>
+  <input class="ml-4" type="text" [(ngModel)]="valueString" />
+
+  <legend class="mt-5 ml-4">String from an Object Variable</legend>
+  <input class="ml-4" type="text" [(ngModel)]="valueObject.name" />
+
+  <hr class="mt-4" />
+  <h4 class="text-danger mt-4 ml-4">Binding Simple String Variable</h4>
+  <input class="ml-4" type="text" value="{{ valueString }}" readonly />
+
+  <h4 class="text-danger mt-4 ml-4">Binding String from an Object Variable</h4>
+  <input class="ml-4" type="text" value="{{ valueObject.name }}" readonly />
+</article>

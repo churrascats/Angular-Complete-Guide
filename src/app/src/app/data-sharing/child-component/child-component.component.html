@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <legend class="ml-4">Insert a number:</legend>
+      <input class="ml-4" type="number" [value]="defaultNumber" (keyup)="checkIfInputIsValid($event)" #numberInput/>
+    </div>
+
+    <div class="col-4">
+      <legend class="ml-4">Choose the operation:</legend>
+      <div class="row" #inputRadioContainer>
+        <ng-container *ngFor="let operatorAndCode of operatorsAndCodes">
+          <div class="col-3 text-center">
+            <input
+              type="radio"
+              name="operatorsAndCode"
+              id="{{ operatorAndCode.operator }}"
+              value="{{ operatorAndCode.operator }}"
+              (click)="updateCheckedProperty($event)"
+              checked=false
+            />
+            <label for="operatorAndCode.operator">
+              <span>{{ operatorAndCode.code }}</span>
+            </label>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div
+      class="col-4 d-flex flex-row justify-content-center align-items-center"
+    >
+      <button class="btn-lg btn-success" (click)="calculateTotal()">Confirm</button>
+    </div>
+  </div>
+</div>

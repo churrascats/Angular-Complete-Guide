@@ -1,0 +1,9 @@
+<article>
+  <h2>Class and Style Binding</h2>
+  <div class="mt-4">Pick a class:</div>
+  <select class="form-select mb-4" aria-label="Default select example" (change)="0" #select>
+    <option *ngFor="let class of classes" [value]="class">{{ class }}</option>
+  </select>
+
+  <div *ngFor="let class of classes" class="alert {{ class }}" [ngClass]="{'disabled': class !== select.value}">{{ class }}</div>
+</article>

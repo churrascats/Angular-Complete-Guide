@@ -1,0 +1,9 @@
+<h1>Course List</h1>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel *ngFor="let course of courses" title="{{ course.title }}">
+    <ng-template ngbPanelContent>
+      {{ course.description }}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

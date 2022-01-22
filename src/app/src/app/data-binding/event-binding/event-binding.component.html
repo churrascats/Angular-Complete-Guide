@@ -1,0 +1,29 @@
+<article>
+  <h2>Event Binding</h2>
+
+  <button
+    class="btn btn-primary mt-4 text-center ml-4"
+    (click)="triggerAlert()"
+  >
+    On click event
+  </button>
+
+  <legend class="mt-5 ml-4">Type and check in below section</legend>
+  <input
+    class="ml-4"
+    type="text"
+    (keyup)="triggerKeyUp($event)"
+    #inputVariable
+  />
+
+  <hr class="mt-4" />
+  <h4 class="text-danger mt-4 ml-4">Binding by Component Variable</h4>
+  <input class="ml-4" type="text" value="{{ value }}" readonly />
+
+  <br />
+
+  <h4 class="text-danger mt-5 ml-4">Binding by Template Variable</h4>
+  <input class="ml-4" type="text" value="{{ inputVariable.value }}" readonly />
+
+  <br />
+</article>
