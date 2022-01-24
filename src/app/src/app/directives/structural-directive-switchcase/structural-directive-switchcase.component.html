@@ -1,0 +1,22 @@
+<article>
+  <h2>Structural Directive: NgSwitchCase</h2>
+  <div class="mt-4">Pick a fruit:</div>
+  <select
+    class="form-select mb-4"
+    aria-label="Default select example"
+    (change)="(0)"
+    #select
+  >
+    <option *ngFor="let fruit of fruitList" value="{{ fruit }}">
+      {{ fruit }}
+    </option>
+  </select>
+
+  <ng-container [ngSwitch]="select.value">
+    <ng-container *ngFor="let fruit of fruitList">
+      <div *ngSwitchCase="fruit">
+        <img src="{{ fruitObject[fruit] }}" alt="fruit" />
+      </div>
+    </ng-container>
+  </ng-container>
+</article>

@@ -6,17 +6,12 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { CoursesModule } from './src/app/courses/courses.module'
 import { DataBindingModule } from './src/app/data-binding/data-binding.module'
-import { ParentComponentComponent } from './src/app/data-sharing/parent-component/parent-component.component'
-import { ChildComponentComponent } from './src/app/data-sharing/child-component/child-component.component';
-import { StructuralDirectiveNgifComponent } from './src/app/directives/structural-directive-ngif/structural-directive-ngif.component'
 import { DirectivesModule } from './src/app/directives/directives.module'
+import { DataSharingModule } from './src/app/data-sharing/data-sharing.module'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ParentComponentComponent,
-    ChildComponentComponent,
-    StructuralDirectiveNgifComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +19,7 @@ import { DirectivesModule } from './src/app/directives/directives.module'
     AppRoutingModule,
     CoursesModule,
     DataBindingModule,
+    DataSharingModule,
     DirectivesModule
   ],
   providers: [],
