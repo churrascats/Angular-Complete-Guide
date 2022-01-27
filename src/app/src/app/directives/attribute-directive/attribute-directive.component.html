@@ -1,0 +1,24 @@
+<article>
+  <h2>Attribute Directive</h2>
+  <div class="mt-4">
+    <h3>Pick a color and hover the circles.</h3>
+    <span class="selected-color">
+      (Selected Color:)
+      <button [ngStyle]="{ 'background-color': selectedColor }"></button>
+    </span>
+  </div>
+</article>
+
+<div class="color-palete">
+  <button
+    *ngFor="let color of colors"
+    value="{{ color }}"
+    [ngStyle]="{ 'background-color': color }"
+    (click)="setColor($event.target)"
+  ></button>
+</div>
+
+<div class="circle-container">
+  <span [appHighlightHostListener]="selectedColor">Host Listener</span>
+  <span [appHighlightHostBinding]="selectedColor">Host Binding</span>
+</div>
