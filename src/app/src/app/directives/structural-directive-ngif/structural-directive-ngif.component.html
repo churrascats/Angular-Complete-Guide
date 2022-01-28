@@ -1,3 +1,14 @@
+<!-- Templates -->
+
+<ng-template #ifTrue>
+  <h1 class="alert-success">This component represents a true status</h1>
+</ng-template>
+<ng-template #ifFalse>
+  <h1 class="alert-danger">This component represents a false status</h1>
+</ng-template>
+
+<!--  -->
+
 <article>
   <h2>Structural Directive: NgIf</h2>
   <div class="custom-control custom-switch mt-5">
@@ -13,12 +24,14 @@
   </div>
 
   <div class="mt-5">
+    <h3>Ng If</h3>
     <div *ngIf="ifParameter; then ifTrue; else ifFalse"></div>
-    <ng-template #ifTrue>
-      <h1 class="alert-success">This component represents a true status</h1>
-    </ng-template>
-    <ng-template #ifFalse>
-      <h1 class="alert-danger">This component represents a false status</h1>
-    </ng-template>
+  </div>
+
+  <div class="mt-5">
+    <h3>Ng Else (Custom)</h3>
+    <div *ngElse="ifParameter">
+      <h1 class="alert-danger">Switch is disabled</h1>
+    </div>
   </div>
 </article>

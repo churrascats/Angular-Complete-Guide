@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { StructuralDirectiveNgifComponent } from './structural-directive-ngif/structural-directive-ngif.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
-import { StructuralDirectiveSwitchcaseComponent } from './structural-directive-switchcase/structural-directive-switchcase.component';
-import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
-import { HighlightHostListenerDirective } from './attribute-directive/highlightHostListener.directive';
-import { HighlightHostBindingDirective } from './attribute-directive/highlight-host-binding.directive';
+import { StructuralDirectiveSwitchcaseComponent } from './structural-directive-switchcase/structural-directive-switchcase.component'
+import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component'
+import { HighlightHostListenerDirective } from './attribute-directive/highlightHostListener.directive'
+import { HighlightHostBindingDirective } from './attribute-directive/highlight-host-binding.directive'
+import { NgElseDirective } from './structural-directive-ngif/ng-else.directive'
 
 @NgModule({
   declarations: [
@@ -13,13 +14,14 @@ import { HighlightHostBindingDirective } from './attribute-directive/highlight-h
     StructuralDirectiveSwitchcaseComponent,
     AttributeDirectiveComponent,
     HighlightHostListenerDirective,
-    HighlightHostBindingDirective
+    HighlightHostBindingDirective,
+    NgElseDirective
   ],
   imports: [CommonModule, NgbModule],
   exports: [
     StructuralDirectiveNgifComponent,
     StructuralDirectiveSwitchcaseComponent,
-    AttributeDirectiveComponent
+    AttributeDirectiveComponent,
   ],
 })
 export class DirectivesModule {}
