@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoursesComponent } from './src/app/courses/courses.component';
-import { ClassBindingComponent } from './src/app/data-binding/class-binding/class-binding.component';
-import { EventBindingComponent } from './src/app/data-binding/event-binding/event-binding.component';
-import { TwoWayDataBindingComponent } from './src/app/data-binding/two-way-data-binding/two-way-data-binding.component';
-import { NgContentParentComponent } from './src/app/data-sharing/ng-content/ng-content-parent/ng-content-parent.component';
-import { ParentComponentComponent } from './src/app/data-sharing/parent-component/parent-component.component';
-import { AttributeDirectiveComponent } from './src/app/directives/attribute-directive/attribute-directive.component';
-import { StructuralDirectiveNgifComponent } from './src/app/directives/structural-directive-ngif/structural-directive-ngif.component';
-import { StructuralDirectiveSwitchcaseComponent } from './src/app/directives/structural-directive-switchcase/structural-directive-switchcase.component';
+import { CoursesComponent } from './src/app/components/courses/courses.component';
+import { ClassBindingComponent } from './src/app/components/data-binding/class-binding/class-binding.component';
+import { EventBindingComponent } from './src/app/components/data-binding/event-binding/event-binding.component';
+import { TwoWayDataBindingComponent } from './src/app/components/data-binding/two-way-data-binding/two-way-data-binding.component';
+import { NgContentParentComponent } from './src/app/components/data-sharing/ng-content/ng-content-parent/ng-content-parent.component';
+import { ParentComponentComponent } from './src/app/components/data-sharing/parent-component/parent-component.component';
+import { AttributeDirectiveComponent } from './src/app/components/directives/attribute-directive/attribute-directive.component';
+import { StructuralDirectiveNgifComponent } from './src/app/components/directives/structural-directive-ngif/structural-directive-ngif.component';
+import { StructuralDirectiveSwitchcaseComponent } from './src/app/components/directives/structural-directive-switchcase/structural-directive-switchcase.component';
 
 const routes: Routes = [
   {path: "interpolation", component: CoursesComponent},
