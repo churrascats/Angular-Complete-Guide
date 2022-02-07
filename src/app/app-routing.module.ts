@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoursesComponent } from './src/app/components/courses/courses.component';
+import { CoursesComponent } from './src/app/components/data-binding/interpolation/courses.component';
 import { ClassBindingComponent } from './src/app/components/data-binding/class-binding/class-binding.component';
 import { EventBindingComponent } from './src/app/components/data-binding/event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './src/app/components/data-binding/two-way-data-binding/two-way-data-binding.component';

@@ -1,37 +1,32 @@
-import { Component, OnInit } from '@angular/core'
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  AfterViewChecked,
+  ViewChild,
+  Renderer2,
+} from '@angular/core'
 
 import { MenuItem } from 'primeng/api'
+import { NavbarService } from './navbar.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, AfterViewChecked {
+  @ViewChild('menu') target: any;
+
   items!: MenuItem[]
 
+  constructor(private _renderer: Renderer2, private navbarService: NavbarService) {}
+
   ngOnInit() {
-    this.items = [
-      {
-        label: 'File',
-        items: [
-          {
-            label: 'New',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'Edit',
-        icon: 'pi pi-fw pi-pencil',
-        items: [
-          { label: 'Delete', icon: 'pi pi-fw pi-trash' },
-          { label: 'Refresh', icon: 'pi pi-fw pi-refresh' },
-        ],
-      },
-    ]
+    this.items = this.navbarService.getMenuItem();
+  }
+
+  ngAfterViewChecked(): void {
+    this._renderer.addClass(this.target.el.nativeElement.firstChild, 'mb-5')
   }
 }
