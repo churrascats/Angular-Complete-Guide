@@ -1,6 +1,5 @@
 import {
   Component,
-  ElementRef,
   OnInit,
   AfterViewChecked,
   ViewChild,

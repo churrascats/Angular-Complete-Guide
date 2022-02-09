@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core'
+import { MenuItem } from 'primeng/api'
 
 @Injectable({
   providedIn: 'root',
@@ -6,33 +7,42 @@ import { Injectable } from '@angular/core'
 export class NavbarService {
   constructor() {}
 
-  getMenuItem(): any {
+  getMenuItem(): MenuItem[] {
     return [
       {
         label: 'Data Binding',
+        icon: 'pi pi-fw pi-link',
         items: [
-          {
-            label: 'New',
-            icon: 'pi pi-fw pi-plus',
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
+          { label: 'Parent-Child Stream', routerLink: '/data-sharing-1' },
+          { label: 'NgContent', routerLink: '/data-sharing-2' },
         ],
       },
       {
         label: 'Data Sharing',
-        icon: 'pi pi-fw pi-pencil',
+        icon: 'pi pi-fw pi-share-alt',
         items: [
-          { label: 'Delete', icon: 'pi pi-fw pi-trash' },
-          { label: 'Refresh', icon: 'pi pi-fw pi-refresh' },
+          { label: 'Interpolation', routerLink: '/interpolation' },
+          { label: 'Class Binding', routerLink: '/class-binding' },
+          { label: 'Event Binding', routerLink: '/event-binding' },
+          {
+            label: 'Two way Data Binding',
+            routerLink: '/two-way-data-binding',
+          },
         ],
       },
       {
         label: 'Directives',
-        icon: 'pi pi-fw pi-pencil',
+        icon: 'pi pi-fw pi-cog',
         items: [
-          { label: 'Delete', icon: 'pi pi-fw pi-trash' },
-          { label: 'Refresh', icon: 'pi pi-fw pi-refresh' },
+          { label: 'NgIf', routerLink: '/structural-directive-ngif' },
+          {
+            label: 'NgSwitchCase',
+            routerLink: '/structural-directive-ngswitchcase',
+          },
+          {
+            label: 'Custom Attribute Directive',
+            routerLink: '/attribute-directive',
+          },
         ],
       },
     ]
