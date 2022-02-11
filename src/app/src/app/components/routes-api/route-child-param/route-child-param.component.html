@@ -1,0 +1,18 @@
+<div>
+    <article>
+      <h4 class="mb-5">Send Params:</h4>
+  
+      <span>Id:</span>
+      <input class="form-control mb-4" type="text" id="id" [(ngModel)]="id" />
+      <span>Name:</span>
+      <input class="form-control" type="text" id="name" [(ngModel)]="name" />
+      <button
+        class="btn btn-primary form-control mt-5"
+        [ngStyle]="{ 'max-width': '100px' }"
+        (click)="sendParams()"
+      >
+        Send
+      </button>
+    </article>
+  </div>
+  

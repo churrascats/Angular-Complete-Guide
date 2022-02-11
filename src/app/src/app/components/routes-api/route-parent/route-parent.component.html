@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <article>
+        <h2>Route Parameters:</h2>
+        <p class="mb-5">Param Received Type: <strong>{{ paramType }}</strong></p>
+        <span>Id:</span>
+        <input
+          class="form-control mb-4"
+          type="text"
+          id="id"
+          readonly
+          value="{{ id }}"
+        />
+        <span>Name:</span>
+        <input
+          class="form-control"
+          type="text"
+          id="name"
+          readonly
+          value="{{ name }}"
+        />
+        
+      </article>
+    </div>
+  </div>
+
+  <div class="row" [ngStyle]="{ 'margin-top': '200px' }">
+    <div class="col-4">
+      <app-route-child-param></app-route-child-param>
+    </div>
+
+    <div class="col-4 offset-2">
+      <app-route-child-query-param></app-route-child-query-param>
+    </div>
+  </div>
+</div>

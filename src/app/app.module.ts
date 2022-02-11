@@ -9,9 +9,12 @@ import { DataBindingModule } from './src/app/components/data-binding/data-bindin
 import { DirectivesModule } from './src/app/components/directives/directives.module'
 import { DataSharingModule } from './src/app/components/data-sharing/data-sharing.module'
 import { SharedModuleModule } from './src/app/shared/shared-module.module'
+import { RoutesApiModule } from './src/app/components/routes-api/routes-api.module'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -20,6 +23,7 @@ import { SharedModuleModule } from './src/app/shared/shared-module.module'
     DataBindingModule,
     DataSharingModule,
     DirectivesModule,
+    RoutesApiModule,
     SharedModuleModule,
   ],
   providers: [],

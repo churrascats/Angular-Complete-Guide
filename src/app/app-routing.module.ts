@@ -9,6 +9,7 @@ import { ParentComponentComponent } from './src/app/components/data-sharing/pare
 import { AttributeDirectiveComponent } from './src/app/components/directives/attribute-directive/attribute-directive.component';
 import { StructuralDirectiveNgifComponent } from './src/app/components/directives/structural-directive-ngif/structural-directive-ngif.component';
 import { StructuralDirectiveSwitchcaseComponent } from './src/app/components/directives/structural-directive-switchcase/structural-directive-switchcase.component';
+import { RouteParentComponent } from './src/app/components/routes-api/route-parent/route-parent.component';
 
 const routes: Routes = [
   {path: "interpolation", component: CoursesComponent},
@@ -20,6 +21,8 @@ const routes: Routes = [
   {path: "structural-directive-ngif", component: StructuralDirectiveNgifComponent},
   {path: "structural-directive-ngswithcase", component: StructuralDirectiveSwitchcaseComponent},
   {path: "attribute-directive", component: AttributeDirectiveComponent},
+  {path: "route-api", component: RouteParentComponent},
+  {path: "route-api/:id/:name", component: RouteParentComponent},
 ];
 
 @NgModule({

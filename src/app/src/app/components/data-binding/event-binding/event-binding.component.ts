@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
-import { ModalComponent } from './modal/modal.component'
+import { ModalComponent } from '../../../shared/modal/modal.component'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
+import { ModalData } from '../../../shared/modal/modal-data-model';
 
 @Component({
   selector: 'app-event-binding',
@@ -10,10 +11,17 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
 export class EventBindingComponent {
   value : string | undefined
 
-  constructor(private modalService: NgbModal) {}
+  modalData: ModalData;
+
+  constructor(private modalService: NgbModal) { 
+    this.modalData = new ModalData("Hey There", "Event Triggered!");
+  }
+
 
   triggerAlert(): void {
     const modalRef = this.modalService.open(ModalComponent, { centered: true })
+
+    modalRef.componentInstance.modalData = this.modalData;
   }
 
   triggerKeyUp(event: KeyboardEvent): void {

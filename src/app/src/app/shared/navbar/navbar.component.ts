@@ -7,7 +7,7 @@ import {
 } from '@angular/core'
 
 import { MenuItem } from 'primeng/api'
-import { NavbarService } from './navbar.service';
+import { NavbarService } from './navbar.service'
 
 @Component({
   selector: 'app-navbar',
@@ -15,14 +15,17 @@ import { NavbarService } from './navbar.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit, AfterViewChecked {
-  @ViewChild('menu') target: any;
+  @ViewChild('menu') target: any
 
   items!: MenuItem[]
 
-  constructor(private _renderer: Renderer2, private navbarService: NavbarService) {}
+  constructor(
+    private _renderer: Renderer2,
+    private navbarService: NavbarService,
+  ) {}
 
   ngOnInit() {
-    this.items = this.navbarService.getMenuItem();
+    this.items = this.navbarService.getMenuItem()
   }
 
   ngAfterViewChecked(): void {

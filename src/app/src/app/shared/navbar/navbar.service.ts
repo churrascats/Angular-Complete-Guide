@@ -13,17 +13,32 @@ export class NavbarService {
         label: 'Data Binding',
         icon: 'pi pi-fw pi-link',
         items: [
-          { label: 'Parent-Child Stream', routerLink: '/data-sharing-1' },
-          { label: 'NgContent', routerLink: '/data-sharing-2' },
+          {
+            label: 'Parent-Child Stream',
+            routerLink: '/data-sharing-1',
+          },
+          {
+            label: 'NgContent',
+            routerLink: '/data-sharing-2',
+          },
         ],
       },
       {
         label: 'Data Sharing',
         icon: 'pi pi-fw pi-share-alt',
         items: [
-          { label: 'Interpolation', routerLink: '/interpolation' },
-          { label: 'Class Binding', routerLink: '/class-binding' },
-          { label: 'Event Binding', routerLink: '/event-binding' },
+          {
+            label: 'Interpolation',
+            routerLink: '/interpolation',
+          },
+          {
+            label: 'Class Binding',
+            routerLink: '/class-binding',
+          },
+          {
+            label: 'Event Binding',
+            routerLink: '/event-binding',
+          },
           {
             label: 'Two way Data Binding',
             routerLink: '/two-way-data-binding',
@@ -34,14 +49,27 @@ export class NavbarService {
         label: 'Directives',
         icon: 'pi pi-fw pi-cog',
         items: [
-          { label: 'NgIf', routerLink: '/structural-directive-ngif' },
+          {
+            label: 'NgIf',
+            routerLink: '/structural-directive-ngif',
+          },
           {
             label: 'NgSwitchCase',
-            routerLink: '/structural-directive-ngswitchcase',
+            routerLink: '/structural-directive-ngswithcase',
           },
           {
             label: 'Custom Attribute Directive',
             routerLink: '/attribute-directive',
+          },
+        ],
+      },
+      {
+        label: 'Routes',
+        icon: 'pi pi-fw pi-sitemap',
+        items: [
+          {
+            label: 'Route Parameters',
+            routerLink: '/route-api',
           },
         ],
       },
