@@ -1,1 +1,3 @@
-<p-menubar [model]="items" #menu></p-menubar>
+<p-menubar [model]="items" #menu *ngIf="isLogged">
+  <button pButton label="Logout" class="p-button-secondary p-button-raised" icon="pi pi-power-off" (click)="logout()"></button>
+</p-menubar>
