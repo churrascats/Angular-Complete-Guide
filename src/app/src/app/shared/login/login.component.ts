@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
 
   validate(): void {
     if (!this.authService.authenticate(this.username, this.password)) {
-      console.log(this.modalData);
       const modalRef = this.modalService.open(ModalComponent, {
         centered: true,
       })
