@@ -65,11 +65,25 @@ export class NavbarService {
       },
       {
         label: 'Routes',
-        icon: 'pi pi-fw pi-sitemap',
+        icon: 'pi pi-fw pi-directions',
         items: [
           {
             label: 'Route Parameters',
             routerLink: '/route-api',
+          },
+        ],
+      },
+      {
+        label: 'Forms',
+        icon: 'pi pi-fw pi-id-card',
+        items: [
+          {
+            label: 'Data Driven Form',
+            routerLink: '/data-driven-form',
+          },
+          {
+            label: 'Template Driven Form',
+            routerLink: '/template-driven-form',
           },
         ],
       },

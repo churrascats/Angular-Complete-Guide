@@ -12,6 +12,8 @@ import { StructuralDirectiveSwitchcaseComponent } from './src/app/components/dir
 import { RouteParentComponent } from './src/app/components/routes-api/route-parent/route-parent.component'
 import { LoginComponent } from './src/app/shared/login/login.component'
 import { AuthGuard } from './src/app/guards/auth.guard'
+import { DataDrivenFormComponent } from './src/app/components/forms/data-driven-form/data-driven-form.component'
+import { TemplateDrivenFormComponent } from './src/app/components/forms/template-driven-form/template-driven-form.component'
 
 const routes: Routes = [
   {
@@ -67,6 +69,16 @@ const routes: Routes = [
   {
     path: 'route-api/:id/:name',
     component: RouteParentComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'data-driven-form',
+    component: DataDrivenFormComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'template-driven-form',
+    component: TemplateDrivenFormComponent,
     canActivate: [AuthGuard],
   },
   { path: '', component: LoginComponent },

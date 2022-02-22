@@ -19,7 +19,8 @@ export class NavbarComponent implements OnInit, AfterViewChecked {
   @ViewChild('menu') target: any
 
   items!: MenuItem[]
-  isLogged: boolean = false
+  //isLogged: boolean = false
+  isLogged: boolean = true
 
   constructor(
     private _renderer: Renderer2,
