@@ -2,41 +2,46 @@
   <div class="row">
     <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="col-6 offset-1">
       <h2 class="mb-5">Template Driven Form</h2>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input
-          [(ngModel)]="name"
-          (keyup)="getClass($event, 'name', form)"
-          (focus)="getClass($event, 'name', form)"
-          (focusout)="getClass($event, 'name', form)"
-          type="text"
-          class="form-control"
-          name="name"
-          placeholder="Name"
-          minlength="1"
-          maxlength="20"
-          required
-          pattern="^[A-Za-z]+$"
-          #inputName
-        />
+      <div ngModelGroup="data">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            [(ngModel)]="name"
+            (keyup)="getClass($event, 'name', form)"
+            (focus)="getClass($event, 'name', form)"
+            (focusout)="getClass($event, 'name', form)"
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="Name"
+            minlength="1"
+            maxlength="20"
+            required
+            pattern="^[A-Za-z]+$"
+            #inputName
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            [(ngModel)]="email"
+            (keyup)="getClass($event, 'email', form)"
+            (focus)="getClass($event, 'email', form)"
+            (focusout)="getClass($event, 'email', form)"
+            type="text"
+            class="form-control"
+            name="email"
+            placeholder="E-mail"
+            email
+            required
+            #inputEmail
+          />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          [(ngModel)]="email"
-          (keyup)="getClass($event, 'email', form)"
-          (focus)="getClass($event, 'email', form)"
-          (focusout)="getClass($event, 'email', form)"
-          type="text"
-          class="form-control"
-          name="email"
-          placeholder="E-mail"
-          email
-          required
-          #inputEmail
-        />
-      </div>
-      <button type="submit" class="btn btn-primary" [disabled]="isFormValid">Submit</button>
+
+      <button type="submit" class="btn btn-primary" [disabled]="isFormValid">
+        Submit
+      </button>
       <pre
         class="mt-5">{{ form.form.value | json }} <hr>name control: {{nameControl}}<br>email control: {{emailControl}}</pre>
     </form>
